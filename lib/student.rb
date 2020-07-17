@@ -18,14 +18,17 @@ class Student
       CREATE TABLE IF NOT EXISTS students ( 
       id INTEGER PRIMARY KEY,
       name TEXT,
-      ORDER BY students.id LIMIT 1 
+      grade TEXT 
+      )
     SQL
 
-    DB[:conn].execute(sql).map do |row|
-      self.new_from_db(row)
-    end
-    .first
+    DB[:conn].execute(sql)
   end
+    
+  def save
+    if self.id 
+      self.update 
+      
 
 
 end
