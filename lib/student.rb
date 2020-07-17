@@ -36,7 +36,8 @@ class Student
         grade TEXT 
         )
       SQL
-      
+      DB[:conn].execute(sql, self.name, self.grade)
+      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM ")
 
 
 end
