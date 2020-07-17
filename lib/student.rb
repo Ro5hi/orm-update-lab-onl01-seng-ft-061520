@@ -13,6 +13,10 @@ class Student
     @grade = grade 
   end 
   
+  def drop_table 
+  end 
+
+  
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students ( 
