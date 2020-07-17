@@ -15,9 +15,9 @@ class Student
   
   def self.create_table
         sql = <<-SQL
-      SELECT * 
-      FROM students 
-      WHERE grade = 10 
+      CREATE TABLE IF NOT EXISTS students ( 
+      id INTEGER PRIMARY KEY,
+      name TEXT,
       ORDER BY students.id LIMIT 1 
     SQL
 
